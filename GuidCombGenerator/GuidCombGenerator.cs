@@ -1,4 +1,4 @@
-﻿namespace GuidCombGenerator
+﻿namespace Utils
 {
     using System;
 

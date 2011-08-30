@@ -1,8 +1,8 @@
-﻿namespace Utils
+﻿namespace System
 {
     using System;
 
-    public static class GuidCombGenerator
+    public static class CombGuid
     {
         public static Guid NewGuid()
         {

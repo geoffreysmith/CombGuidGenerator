@@ -31,10 +31,11 @@
             return new Guid(guidArray);
         }
         
-        // For whatever reason, you can't do this in-line.
+        // Yes, I know, and no, you can't make it a one liner.
         public static Guid Bind(dynamic dyn)
         {
-            return Guid.Parse(dyn);
+            var thisIsStupid = Guid.Parse(dyn.ToString());
+            return thisIsStupid;
         }
     }
 }

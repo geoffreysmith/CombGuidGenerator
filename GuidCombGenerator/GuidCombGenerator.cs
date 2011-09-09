@@ -4,8 +4,19 @@
 
     public static class CombGuid
     {
+        // For testing purposes
+        [ThreadStatic] 
+        public static Guid? nextGuid;
+
+        public static void SetNextGuid(Guid guid)
+        {
+            nextGuid = guid;
+        }
+
         public static Guid NewGuid()
         {
+            if (nextGuid != null)
+                return nextGuid.Value;
             byte[] guidArray = Guid.NewGuid().ToByteArray();
 
             DateTime baseDate = new DateTime(1900, 1, 1);

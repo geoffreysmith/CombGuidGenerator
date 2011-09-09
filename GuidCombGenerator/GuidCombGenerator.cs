@@ -30,5 +30,11 @@
 
             return new Guid(guidArray);
         }
+        
+        // For whatever reason, you can't do this in-line.
+        public static Guid Bind(dynamic dyn)
+        {
+            return Guid.Parse(dyn);
+        }
     }
 }
